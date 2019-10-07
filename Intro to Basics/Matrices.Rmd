@@ -1,0 +1,22 @@
+---
+title: "Matrices"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+```
+
+
+
+## 3.1 What's a matrix?
+
+In R, a matrix is a collection of elements of the same data type (numeric, character, or logical) arranged into
+a fixed number of rows and columns. Since you are only working with rows and columns, a matrix is called
+two-dimensional.
+You can construct a matrix in R with the matrix() function. Consider the following example:
+
+```{r example 3.1, exercise = TRUE}
+matrix(1:9, byrow = TRUE, nrow = 3)
+```
