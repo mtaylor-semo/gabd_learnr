@@ -12,7 +12,7 @@ library(learnr)
 ## 1.1 Comments and Calculators
 R makes use of the # sign to add comments, so that you and others can understand what the R code is about.
 Just like Twitter! Comments are not run as R code, so they will not influence your result. For example,
-Calculate 3 + 4 in the example below is a comment.
+"Calculate 3 + 4"" in the example below is a comment.
 
 ```{r example, exercise = TRUE}
 #Calculate 3 + 4
@@ -39,6 +39,14 @@ did and why you did it.
 
 #Calculate 6 + 12
 
+```
+
+```{r Q1.1-solution}
+#Calculate 3 + 4
+3 + 4
+
+#Calculate 6 + 12
+6+12
 ```
 
 ## 1.2 Arithmetic with R
@@ -86,6 +94,27 @@ With this knowledge, follow the instructions below to complete this exercise.
 #
 ```
 
+```{r Q1.2-solution}
+# An addition
+5 + 5
+
+#A subtraction
+5 - 5
+
+# A multiplication
+3 * 5
+
+# A division
+(5 + 5) / 2
+
+# An exponentation
+2^5
+
+# A modulo
+28 %% 6
+
+#
+```
 
 ## 1.3 Variable Assignment
 
@@ -97,6 +126,7 @@ enter the <- with appropriate spacing. Or, take the long way and type the less t
 dash. Your choice. *Work smart, not hard.*
 
 You can see what is stored in a variable by entering the variable name on a line by itself
+
 ```{r variable, exercise = TRUE}
 my_var <- 4
 
@@ -108,11 +138,21 @@ my_var
 Complete the code in the chunk such that it assigns the value 42 to the variable x, and then view the contents
 of x. You know what to do with the green arrow. Notice that when you ask R to print x, the value 42
 appears. At least it will if you did this correctly!
-```{r Assign 42, exercise = TRUE}
+
+```{r exercise 1.3, exercise = TRUE}
 # Assign the value 42 to x
 
 #print out the value of the variable x
 
+#
+
+```
+
+```{r exercise 1.3-solution}
+# Assign the value 42 to x
+x <- 42
+#print out the value of the variable x
+x
 #
 
 ```
@@ -129,11 +169,20 @@ Instructions
 • Type my_apples below the second comment. This will print out the value of my_apples.
 Run  the code chunk and look at the console: you see that the number 5 is printed. So R now links the
 variable my_apples to the value 5.
-```{r My Apples, exercise = TRUE}
+
+```{r exercise 1.4, exercise = TRUE}
 # Assign the value 5 to the variable my_apples
 
 #Print out the variable my_apples
 
+#
+```
+
+```{r exercise 1.4-solution}
+# Assign the value 5 to the variable my_apples
+my_apples <- 5
+#Print out the variable my_apples
+my_apples
 #
 ```
 
@@ -151,6 +200,7 @@ my_apples + my_oranges
 • Assign to my_oranges the value 6.
 • Add the variables my_apples and my_oranges and have R simply print the result.
 • Assign the result of adding my_apples and my_oranges to a new variable my_fruit
+
 ```{r Q1.5, exercise = TRUE}
 #Assign a value to the variables my_apples and my_oranges
 my_apples <- 5
@@ -163,6 +213,18 @@ my_apples <- 5
 
 ```
 
+```{r Q1.5-solution}
+#Assign a value to the variables my_apples and my_oranges
+my_apples <- 5
+my_oranges <- 6
+# Add these two variables together
+my_apples + my_oranges
+# Create the variable my_fruit
+my_fruit <- my_apples + my_oranges
+#
+
+```
+
 ## 1.6 Apples and Oranges
 
 Common knowledge tells you not to add apples and oranges. But hey, that is what you just did, no? The
@@ -171,14 +233,12 @@ works with numeric variables in R. If you really tried to add “apples” and �
 value to the variable my_oranges, you would be trying to assign the addition of a numeric and a character
 variable to the variable my_fruit. This is not possible.
 
-*Insert non working code here*
-
 #### Instructions
 
 • Run the code chunk and read the error message. Make sure to understand why this did not work.
 • Adjust the code so that R knows you have 6 oranges and thus a fruit basket with 11 pieces of fruit
 
-```{r name, exercise = TRUE}
+```{r exercise 1.6, exercise = TRUE}
 # Assign a value to the variable my_apples
 my_apples <- 5
 # Fix the assignment of my_oranges
@@ -188,6 +248,15 @@ my_fruit <- my_apples + my_oranges
 
 ```
 
+```{r exercise 1.6-solution}
+# Assign a value to the variable my_apples
+my_apples <- 5
+# Fix the assignment of my_oranges
+my_oranges <- 6
+# Create the variable my_fruit and print it out
+my_fruit <- my_apples + my_oranges
+my_fruit
+```
 
 ## 1.7 Basic data types in R
 
@@ -206,6 +275,7 @@ Assign values to the these variables:
 • my_character variable to “universe”. Note that the quotation marks indicate that “universe” is a
 character.
 • my_logical variable to FALSE. Note that R is case sensitive!
+
 ```{r assigning data types, exercise = TRUE}
 # Assign 42 to my_numeric
 my_numeric
@@ -226,6 +296,7 @@ with the class() function, as the code on the right shows.
 
 #### Instructions
 * Complete the code to show the classes of my_character and my_logical.
+
 ```{r data type, exercise = TRUE}
 # Declare variables of different types
 my_numeric <- 42
