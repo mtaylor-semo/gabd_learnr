@@ -255,7 +255,7 @@ my_fruit</code></pre>
 <div id="section-instructions-5" class="section level4">
 <h4>Instructions</h4>
 <p>Assign values to the these variables: • my_numeric variable to 42. • my_character variable to “universe”. Note that the quotation marks indicate that “universe” is a character. • my_logical variable to FALSE. Note that R is case sensitive!</p>
-<div class="tutorial-exercise" data-label="assigning data types" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="exercise 1.7" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code># Assign 42 to my_numeric
 my_numeric
 
@@ -265,6 +265,16 @@ my_character
 #Assign FALSE to my_logical. Remember: Case matters
 my_logical</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+</div>
+<div class="tutorial-exercise-support" data-label="exercise 1.7-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># Assign 42 to my_numeric
+my_numeric &lt;- 42
+
+#Assign &quot;universe&quot; to my_character
+my_character &lt;- &quot;universe&quot;
+
+#Assign FALSE to my_logical. Remember: Case matters
+my_logical &lt;- FALSE</code></pre>
 </div>
 </div>
 </div>
@@ -276,10 +286,10 @@ my_logical</code></pre>
 <ul>
 <li>Complete the code to show the classes of my_character and my_logical.</li>
 </ul>
-<div class="tutorial-exercise" data-label="data type" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<div class="tutorial-exercise" data-label="exercise 1.8" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
 <pre class="text"><code># Declare variables of different types
 my_numeric &lt;- 42
-my_characer &lt;- &quot;universe&quot;
+my_character &lt;- &quot;universe&quot;
 my_logical &lt;- FALSE
 
 # Check class of my_numeric
@@ -290,6 +300,21 @@ class(my_numeric)
 
 # Check class of my_logical</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+</div>
+<div class="tutorial-exercise-support" data-label="exercise 1.8-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># Declare variables of different types
+my_numeric &lt;- 42
+my_character &lt;- &quot;universe&quot;
+my_logical &lt;- FALSE
+
+# Check class of my_numeric
+class(my_numeric)
+
+# Check class of my_character
+class(my_character)
+
+# Check class of my_logical
+class(my_logical)</code></pre>
 </div>
 
 <script type="application/shiny-prerendered" data-context="server-start">
@@ -357,16 +382,16 @@ output$`tutorial-exercise-exercise 1.6-output` <- renderUI({
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-assigning data types-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-assigning data types-code-editor`)), session)
-output$`tutorial-exercise-assigning data types-output` <- renderUI({
-  `tutorial-exercise-assigning data types-result`()
+`tutorial-exercise-exercise 1.7-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-exercise 1.7-code-editor`)), session)
+output$`tutorial-exercise-exercise 1.7-output` <- renderUI({
+  `tutorial-exercise-exercise 1.7-result`()
 })
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
-`tutorial-exercise-data type-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-data type-code-editor`)), session)
-output$`tutorial-exercise-data type-output` <- renderUI({
-  `tutorial-exercise-data type-result`()
+`tutorial-exercise-exercise 1.8-result` <- learnr:::setup_exercise_handler(reactive(req(input$`tutorial-exercise-exercise 1.8-code-editor`)), session)
+output$`tutorial-exercise-exercise 1.8-output` <- renderUI({
+  `tutorial-exercise-exercise 1.8-result`()
 })
 </script>
  <!--html_preserve-->
