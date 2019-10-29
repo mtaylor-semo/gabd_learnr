@@ -288,6 +288,16 @@ all_wars_matrix
 #</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
+<div class="tutorial-exercise-support" data-label="exercise 3.7-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># all_wars_matrix is available in your Notebook
+all_wars_matrix
+
+# Total revenue for US and non-US
+total_revenue_vector &lt;- colSums(all_wars_matrix)
+# Print out total_revenue_vector
+total_revenue_vector
+#</code></pre>
+</div>
 </div>
 </div>
 <div id="section-selection-of-matrix-elements" class="section level2">
@@ -315,6 +325,20 @@ all_wars_matrix
 #</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
+<div class="tutorial-exercise-support" data-label="exercise 3.8-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># all_wars_matrix is available in your workspace
+all_wars_matrix
+
+# Select the non-US revenue for all movies
+non_us_all &lt;- all_wars_matrix[,2]
+# Average non-US revenue
+mean(non_us_all)
+# Select the non-US revenue for first two movies
+non_us_some &lt;- all_wars_matrix[1:2,2]
+# Average non-US revenue for first two movies
+mean(non_us_some)
+#</code></pre>
+</div>
 </div>
 </div>
 <div id="section-a-little-arithmetic-with-matrices" class="section level2">
@@ -336,11 +360,21 @@ all_wars_matrix
 #</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
+<div class="tutorial-exercise-support" data-label="exercise 3.9-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># all_wars_matrix is available in your workspace
+all_wars_matrix
+
+# Estimate the visitors
+visitors &lt;- all_wars_matrix/5
+# Print the estimate to the console
+visitors
+#</code></pre>
+</div>
 </div>
 </div>
 <div id="section-a-little-arithmetic-with-matrices-2" class="section level2">
 <h2>3.10 A little arithmetic with matrices (2)</h2>
-<p>Just like 2 * my_matrix multiplied every element of my_matrix by two, my_matrix1 * my_matrix2 creates a matrix where each element is the product of the corresponding elements in my_matrix1 and my_matrix2.</p>
+<p>Just like 2 x my_matrix multiplied every element of my_matrix by two, my_matrix1 x my_matrix2 creates a matrix where each element is the product of the corresponding elements in my_matrix1 and my_matrix2.</p>
 <p>After looking at the result of the previous exercise, big boss Lucas points out that the ticket prices went up over time. He asks to redo the analysis based on the prices you can find in ticket_prices_matrix (source: imagination).</p>
 <p>Those who are familiar with matrices should note that this is not the standard matrix multiplication for which you should use %*% in R.</p>
 <div id="section-instructions-9" class="section level4">
@@ -363,9 +397,35 @@ ticket_prices_matrix &lt;- matrix(ticket_prices, ncol = 2, byrow = TRUE,
 #</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
+<div class="tutorial-exercise-support" data-label="final exercise-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># all_wars_matrix and ticket_prices_matrix are available for you
+all_wars_matrix
+ticket_prices &lt;- c(5.0, 5.0, 6.0, 6.0, 7.0, 7.0, 4.0, 4.0, 4.5, 4.5, 4.9, 4.9)
+ticket_prices_matrix &lt;- matrix(ticket_prices, ncol = 2, byrow = TRUE,
+                               dimnames = list(c(&quot;A New Hope&quot;, &quot;The Empire Strikes Back&quot;, &quot;Return of the Jedi&quot;, &quot;The Phantom Menace&quot;, &quot;Attack of the Clones&quot;, &quot;Revenge of the Sith&quot;),
+                                               c(&quot;US&quot;, &quot;non-US&quot;)))
+
+# Estimated number of visitors
+visitors &lt;- all_wars_matrix / ticket_prices_matrix
+# US visitors
+us_visitors &lt;- visitors[1,]
+# Average number of US visitors
+mean(us_visitors)
+#</code></pre>
+</div>
 
 <script type="application/shiny-prerendered" data-context="server-start">
 library(learnr)
+
+box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
+                           dimnames = list(c("A New Hope", "The Empire Strikes Back", "Return of the Jedi"),
+                                           c("US", "non-US")))
+box_office2 <- c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5)
+star_wars_matrix2 <- matrix(box_office2, nrow = 3, byrow = TRUE,
+                            dimnames = list(c("The Phantom Menace", "Attack of the Clones", "Revenge of the Sith"),
+                                            c("US", "non-US")))
+all_wars_matrix <- rbind(star_wars_matrix, star_wars_matrix2)
 </script>
  
 <script type="application/shiny-prerendered" data-context="server">
