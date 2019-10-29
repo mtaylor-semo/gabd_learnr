@@ -61,6 +61,10 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 <pre class="text"><code># Construct a matrix with 3 rows that contain the numbers 1 up to 9</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
+<div class="tutorial-exercise-support" data-label="exercise 3.1-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># Construct a matrix with 3 rows that contain the numbers 1 up to 9
+matrix(1:9, byrow = TRUE, nrow = 3)</code></pre>
+</div>
 </div>
 </div>
 <div id="section-analyze-matrices-you-shall" class="section level2">
@@ -83,6 +87,18 @@ return_jedi &lt;- c(309.306, 165.8)
 
 #</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+</div>
+<div class="tutorial-exercise-support" data-label="exercise 3.2-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># Box office Star Wars (in millions!)
+new_hope &lt;- c(460.998, 314.4)
+empire_strikes &lt;- c(290.475, 247.900)
+return_jedi &lt;- c(309.306, 165.8)
+
+# Create box_office
+box_office &lt;- c(new_hope, empire_strikes, return_jedi)
+# Construct star_wars_matrix
+star+wars_matrix &lt;- matrix(box_office, byrow = TRUE, nrow = 3)
+#</code></pre>
 </div>
 </div>
 </div>
@@ -120,6 +136,26 @@ titles &lt;- c(&quot;A New Hope&quot;, &quot;The Empire Strikes Back&quot;, &quo
 #</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
+<div class="tutorial-exercise-support" data-label="exercise 3.3-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># Box office Star Wars (in millions!)
+new_hope &lt;- c(460.998, 314.4)
+empire_strikes &lt;- c(290.475, 247.900)
+return_jedi &lt;- c(309.306, 165.8)
+
+# Construct matrix
+star_wars_matrix &lt;- matrix(c(new_hope, empire_strikes, return_jedi), nrow = 3, byrow = TRUE)
+# Vectors region and titles, used for naming
+region &lt;- c(&quot;US&quot;, &quot;non-US&quot;)
+titles &lt;- c(&quot;A New Hope&quot;, &quot;The Empire Strikes Back&quot;, &quot;Return of the Jedi&quot;)
+
+# Name the columns with region
+colnames(star_wars_matrix) &lt;- region
+# Name the rows with titles
+rownames(star_wars_matrix) &lt;- titles
+# Print out star_wars_matrix
+star_wars_matrix
+#</code></pre>
+</div>
 </div>
 </div>
 <div id="section-calculating-the-worldwide-box-office" class="section level2">
@@ -147,6 +183,19 @@ star_wars_matrix &lt;- matrix(box_office, nrow = 3, byrow = TRUE,
 
 #</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+</div>
+<div class="tutorial-exercise-support" data-label="exercise 3.4-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># Construct star_wars_matrix
+box_office &lt;- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+star_wars_matrix &lt;- matrix(box_office, nrow = 3, byrow = TRUE,
+                           dimnames = list(c(&quot;A New Hope&quot;, &quot;The Empire Strikes Back&quot;, &quot;Return of the Jedi&quot;),
+                                           c(&quot;US&quot;, &quot;non-US&quot;)))
+
+# Calculate worldwide box office figures
+worldwide_vector &lt;- rowSums(star_wars_matrix)
+# Print out worldwide_vector
+worldwide_vector
+#</code></pre>
 </div>
 </div>
 </div>
@@ -176,6 +225,18 @@ worldwide_vector &lt;- rowSums(star_wars_matrix)
 #</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
 </div>
+<pre class="r"><code># Construct star_wars_matrix
+box_office &lt;- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
+star_wars_matrix &lt;- matrix(box_office, nrow = 3, byrow = TRUE,
+                           dimnames = list(c(&quot;A New Hope&quot;, &quot;The Empire Strikes Back&quot;, &quot;Return of the Jedi&quot;),
+                                           c(&quot;US&quot;, &quot;non-US&quot;)))
+
+# The worldwide box office figures
+worldwide_vector &lt;- rowSums(star_wars_matrix)
+
+# Bind the new variable worldwide_vector as a column to star_wars_matrix
+all_wars_matrix &lt;- cbind(star_wars_matrix, worldwide_vector)
+#</code></pre>
 </div>
 </div>
 <div id="section-adding-a-row" class="section level2">
@@ -197,6 +258,16 @@ star_wars_matrix2 &lt;- matrix(box_office2, nrow = 3, byrow = TRUE,
 
 #</code></pre>
 <script type="application/json" data-opts-chunk="1">{"fig.width":6.5,"fig.height":4,"fig.retina":2,"fig.align":"default","fig.keep":"high","fig.show":"asis","out.width":624,"warning":true,"error":false,"message":true,"exercise.df_print":"paged","exercise.checker":"NULL"}</script>
+</div>
+<div class="tutorial-exercise-support" data-label="exercise 3.6-solution" data-caption="Code" data-completion="1" data-diagnostics="1" data-startover="1" data-lines="0">
+<pre class="text"><code># star_wars_matrix and star_wars_matrix2 are available in your workspace
+box_office2 &lt;- c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5)
+star_wars_matrix2 &lt;- matrix(box_office2, nrow = 3, byrow = TRUE,
+                            dimnames = list(c(&quot;The Phantom Menace&quot;, &quot;Attack of the Clones&quot;, &quot;Revenge of the Sith&quot;),
+                                            c(&quot;US&quot;, &quot;non-US&quot;)))
+# Combine both Star Wars trilogies in one matrix
+all_wars_matrix &lt;- rbind(star_wars_matrix, star_wars_matrix2)
+#</code></pre>
 </div>
 </div>
 </div>
