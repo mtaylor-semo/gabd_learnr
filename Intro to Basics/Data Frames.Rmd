@@ -36,7 +36,7 @@ A data frame has the variables of a data set as columns and the observations as 
 
 Run the code below. The data from the built-in data frame mtcars will be printed.
 
-```{r exercise 5.1, exercise = TRUE}
+```{r exercise_5_1, exercise = TRUE}
 # Print out built-in R data frame
 mtcars
 ```
@@ -55,14 +55,14 @@ Both head() and tail() print a top line called the ‘header’, which contains 
 
 Call head() on the mtcars data set to have a look at the header and the first observations.
 
-```{r exercise 5.2, exercise = TRUE}
+```{r exercise_5_2, exercise = TRUE}
 # Call head() on mtcars
 
 
 #
 ```
 
-```{r exercise 5.2-solution}
+```{r exercise_5_2-solution}
 # Call head() on mtcars
 head(mtcars)
 
@@ -85,14 +85,14 @@ Applying the str() function will often be the first thing that you do when recei
 
 Investigate the structure of mtcars. Make sure that you see the same numbers, variables and data types as mentioned above.
 
-```{r exercise 5.3, exercise = TRUE}
+```{r exercise_5_3, exercise = TRUE}
 # Investigate the structure of mtcars
 
 
 #
 ```
 
-```{r exercise 5.3-solution}
+```{r exercise_5_3-solution}
 # Investigate the structure of mtcars
 str(mtcars)
 
@@ -116,7 +116,7 @@ After doing some high-quality research on Wikipedia, you feel confident enough t
 
 use the fuction data.frame() to construct a data frame. Pass the vectors name, type, diameter, rotation and rings as arguments to data.frame(), in this order. Call the resulting data frame planets_df.
 
-```{r exercise 5.4, exercise = TRUE}
+```{r exercise_5_4, exercise = TRUE}
 # Definition of vectors
 name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
 type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet",
@@ -128,7 +128,7 @@ rings <- c(FALSE, FALSE, FALSE, FALSE, TRUE, TRUE, TRUE, TRUE)
 #
 ```
 
-```{r exercise 5.4-solution}
+```{r exercise_5_4-solution}
 # Definition of vectors
 name <- c("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
 type <- c("Terrestrial planet", "Terrestrial planet", "Terrestrial planet",
@@ -149,13 +149,13 @@ The planets_df data frame should have 8 observations and 5 variables. It is in y
 
 Use str() to investigate the structure of the new planets_df variable.
 
-```{r exercise 5.5, exercise = TRUE}
+```{r exercise_5_5, exercise = TRUE}
 # Check the structure of planets_df
 
 #
 ```
 
-```{r exercise 5.5-solution}
+```{r exercise_5_5-solution}
 # Check the structure of planets_df
 str(planets_df)
 #
@@ -175,7 +175,7 @@ Sometimes you want to select all elements of a row or column. For example, my_df
 • From planets_df, select the diameter of Mercury: this is the value at the first row and the third column. Simply print out the result.
 • From planets_df, select all data on Mars (the fourth row). Simply print out the result.
 
-```{r exercise 5.6, exercise = TRUE}
+```{r exercise_5_6, exercise = TRUE}
 # The planets_df data frame from the previous exercise is pre-loaded
 
 # Print out diameter of Mercury (row 1, column 3)
@@ -185,7 +185,7 @@ Sometimes you want to select all elements of a row or column. For example, my_df
 #
 ```
 
-```{r exercise 5.6-solution}
+```{r exercise_5_6-solution}
 # The planets_df data frame from the previous exercise is pre-loaded
 
 # Print out diameter of Mercury (row 1, column 3)
@@ -201,7 +201,7 @@ Instead of using numerics to select elements of a data frame, you can also use t
 
 Suppose you want to select the first three elements of the type column. One way to do this is
 
-```{r example 5.7, exercise = TRUE}
+```{r example_5_7, exercise = TRUE}
 planets_df[1:3,2]
 ```
 
@@ -211,7 +211,7 @@ A possible disadvantage of this approach is that you have to know (or look up) t
 
 Select and print out the first 5 values in the "diameter" column of planets_df.
 
-```{r exercise 5.7, exercise = TRUE}
+```{r exercise_5_7, exercise = TRUE}
 # The planets_df data frame from the previous exercise is available
 
 # Select first 5 values of diameter column
@@ -219,7 +219,7 @@ Select and print out the first 5 values in the "diameter" column of planets_df.
 #
 ```
 
-```{r exercise 5.7-solution}
+```{r exercise_5_7-solution}
 # The planets_df data frame from the previous exercise is available
 
 # Select first 5 values of diameter column
@@ -231,14 +231,14 @@ planets_df[1:5,"diameter"]
 
 You will often want to select an entire column, namely one specific variable from a data frame. If you want to select all elements of the variable diameter, for example, both of these will do the trick:
 
-```{r example 5.8, exercise = TRUE}
+```{r example_5_8, exercise = TRUE}
 planets_df[,3]
 planets_df[,"diameter"]
 ```
 
 However, there is a short-cut. If your columns have names, you can use the $ sign:
 
-```{r example 5.8.2 , exercise = TRUE}
+```{r example_5_8_2, exercise = TRUE}
 planets_df$diameter
 ```
 
@@ -248,7 +248,7 @@ planets_df$diameter
 rings_vector.
 • Print out rings_vector to see if you got it right.
 
-```{r exercise 5.8, exercise = TRUE}
+```{r exercise_5_8, exercise = TRUE}
 # planets_df is pre-loaded in your workspace
 
 # Select the rings variable from planets_df
@@ -258,7 +258,7 @@ rings_vector.
 #
 ```
 
-```{r exercise 5.8-solution}
+```{r exercise_5_8-solution}
 # planets_df is pre-loaded in your workspace
 
 # Select the rings variable from planets_df
@@ -282,14 +282,14 @@ This means that the first four observations (or planets) do not have a ring (FAL
 
 The code below selects the name column of all planets that have rings. Adapt the code so that instead of only the name column, all columns for planets that have rings are selected.
 
-```{r exercise 5.9, exercise = TRUE}
+```{r exercise_5_9, exercise = TRUE}
 # planets_df and rings_vector are pre-loaded in your workspace
 
 # Adapt the code to select all columns for planets with rings
 planets_df[5:8, "name" ]
 ```
 
-```{r exercise 5.9-solution}
+```{r exercise_5_9-solution}
 # planets_df and rings_vector are pre-loaded in your workspace
 
 # Adapt the code to select all columns for planets with rings
@@ -302,7 +302,7 @@ So what exactly did you learn in the previous exercises? You selected a subset f
 
 Now, let us move up one level and use the function subset(). You should see the subset() function as a short-cut to do exactly the same as what you did in the previous exercises.
 
-```{r example 5.10, exercise = TRUE}
+```{r example_5_10, exercise = TRUE}
 subset(my_df, subset = some_condition)
 ```
 
@@ -310,7 +310,7 @@ The first argument of subset() specifies the data set for which you want a subse
 
 The code below will give the exact same result as you got in the previous exercise, but this time, you didn’t need the rings_vector
 
-```{r example 5.10.2, exercise = TRUE}
+```{r example_5_10_2, exercise = TRUE}
 subset(planets_df, subset = rings)
 ```
 
@@ -318,7 +318,7 @@ subset(planets_df, subset = rings)
 
 Use subset() on planets_df to select planets that have a diameter smaller than Earth. Because the diameter variable is a relative measure of the planet’s diameter w.r.t that of planet Earth, your condition is diameter < 1
 
-```{r exercise 5.10, exercise = TRUE}
+```{r exercise_5_10, exercise = TRUE}
 # planets_df is pre-loaded in your workspace
 
 # Select planets with diameter < 1
@@ -326,7 +326,7 @@ Use subset() on planets_df to select planets that have a diameter smaller than E
 #
 ```
 
-```{r exercise 5.10-solution}
+```{r exercise_5_10-solution}
 # planets_df is pre-loaded in your workspace
 
 # Select planets with diameter < 1
@@ -342,7 +342,7 @@ In data analysis you can sort your data according to a certain variable in the d
 
 order() is a function that gives you the ranked position of each element when it is applied on a variable, such as a vector for example:
 
-```{r example 5.11, exercise = TRUE}
+```{r example_5_11, exercise = TRUE}
 a <- c(100, 10, 1000)
 order(a)
 ```
@@ -351,13 +351,13 @@ order(a)
 
 This means we can use the output of order(a) to reshuffle a:
 
-```{r example 5.11.2, exercise = TRUE}
+```{r example_5_11_2, exercise = TRUE}
 a[order(a)]
 ```
 
 More often, you might save the order to a variable, and then use the variable to set the order, as in this example. Here, I am using the head() function to show only the first 8 rows of the data frame.
 
-```{r example 5.11.3, exercise = TRUE}
+```{r example_5_11_3, exercise = TRUE}
 mpg_rank <- order(mtcars$mpg)
 head(mtcars[mpg_rank, ], 8)
 ```
@@ -368,7 +368,7 @@ Clearly, the Cadillac and Lincoln are good gas guzzlers. What if you want a more
 
 • Read and run this example. What does the argument decreasing = TRUE do?
 
-```{r exercise 5.11, exercise = TRUE}
+```{r exercise_5_11, exercise = TRUE}
 mpg_rank <- order(mtcars$mpg, decreasing = TRUE)
 head(mtcars[mpg_rank, ], 8)
 ```
@@ -384,7 +384,7 @@ Alright, now that you understand the order() function, let us do something usefu
 • Call order() again on planets_df$rotation, with the highest value first. Store the result in rot_position.
 • Sort planets_df as you did above, but use rot_position as the row index. Print out the result.
 
-```{r exercie 5.12, exercise = TRUE}
+```{r exercise_5_12, exercise = TRUE}
 # planets_df is pre-loaded in your workspace
 
 # Use order() to create positions
@@ -398,7 +398,7 @@ Alright, now that you understand the order() function, let us do something usefu
 #
 ```
 
-```{r exercie 5.12-solution}
+```{r exercise_5_12-solution}
 # planets_df is pre-loaded in your workspace
 
 # Use order() to create positions
