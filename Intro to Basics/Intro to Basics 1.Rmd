@@ -33,7 +33,7 @@ run your code chunk.
 You will return to your code at some point in the future. The comments will help you remember what you
 did and why you did it.
 
-```{r Q1.1, exercise=TRUE}
+```{r Q1_1, exercise=TRUE}
 #Calculate 3 + 4
 3 + 4
 
@@ -41,7 +41,7 @@ did and why you did it.
 
 ```
 
-```{r Q1.1-solution}
+```{r Q1_1-solution}
 #Calculate 3 + 4
 3 + 4
 
@@ -72,7 +72,7 @@ With this knowledge, follow the instructions below to complete this exercise.
 * Type 2 ^ 5 in the editor to calculate 2 to the power 5.
 * Type 28 %% 6 to calculate 28 modulo 6.
 
-```{r Q1.2, exercise = TRUE}
+```{r Q1_2, exercise = TRUE}
 # An addition
 5 + 5
 
@@ -94,7 +94,7 @@ With this knowledge, follow the instructions below to complete this exercise.
 #
 ```
 
-```{r Q1.2-solution}
+```{r Q1_2-solution}
 # An addition
 5 + 5
 
@@ -201,7 +201,7 @@ my_apples + my_oranges
 • Add the variables my_apples and my_oranges and have R simply print the result.
 • Assign the result of adding my_apples and my_oranges to a new variable my_fruit
 
-```{r Q1.5, exercise = TRUE}
+```{r Q1_5, exercise = TRUE}
 #Assign a value to the variables my_apples and my_oranges
 my_apples <- 5
 
@@ -213,7 +213,7 @@ my_apples <- 5
 
 ```
 
-```{r Q1.5-solution}
+```{r Q1_5-solution}
 #Assign a value to the variables my_apples and my_oranges
 my_apples <- 5
 my_oranges <- 6
