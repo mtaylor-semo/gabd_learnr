@@ -27,7 +27,7 @@ a fixed number of rows and columns. Since you are only working with rows and col
 two-dimensional.
 You can construct a matrix in R with the matrix() function. Consider the following example:
 
-```{r example 3.1, exercise = TRUE}
+```{r example_3_1, exercise = TRUE}
 matrix(1:9, byrow = TRUE, nrow = 3)
 ```
 
@@ -39,13 +39,13 @@ In the matrix() function:
 #### Instructions
 * Construct a matrix with 3 rows containing the numbers 1 up to 9, filled row-wise.
 
-```{r exercise 3.1, exercise = TRUE}
+```{r exercise_3_1, exercise = TRUE}
 # Construct a matrix with 3 rows that contain the numbers 1 up to 9
 
 
 ```
 
-```{r exercise 3.1-solution}
+```{r exercise_3_1-solution}
 # Construct a matrix with 3 rows that contain the numbers 1 up to 9
 matrix(1:9, byrow = TRUE, nrow = 3)
 
@@ -63,7 +63,7 @@ In this exercise, you’ll combine all these figures into a single vector. Next,
 • Use c(new_hope, empire_strikes, return_jedi) to combine the three vectors into one vector. Call this vector box_office.
 • Construct a matrix with 3 rows, where each row represents a movie. Use the matrix() function to do this. The first argument is the vector box_office, containing all box office figures. Next, you’ll have to specify nrow = 3 and byrow = TRUE. Name the resulting matrix star_wars_matrix.
 
-```{r exercise 3.2, exercise = TRUE}
+```{r exercise_3_2, exercise = TRUE}
 # Box office Star Wars (in millions!)
 new_hope <- c(460.998, 314.4)
 empire_strikes <- c(290.475, 247.900)
@@ -76,7 +76,7 @@ return_jedi <- c(309.306, 165.8)
 #
 ```
 
-```{r exercise 3.2-solution}
+```{r exercise_3_2-solution}
 # Box office Star Wars (in millions!)
 new_hope <- c(460.998, 314.4)
 empire_strikes <- c(290.475, 247.900)
@@ -95,7 +95,7 @@ To help you remember what is stored in star_wars_matrix, you would like to add t
 
 Similar to vectors, you can add names for the rows and the columns of a matrix
 
-```{r example 3.3, exercise = TRUE}
+```{r example_3_3, exercise = TRUE}
 rownames(my_matrix) <- row_names_vector
 colnames(my_matrix) <- col_names_vector
 ```
@@ -108,7 +108,7 @@ I prepared two vectors for you: region, and titles. You will need these vectors 
 • Use rownames() to name the rows of star_wars_matrix with the titles vector.
 • Print out star_wars_matrix to see the result of your work.
 
-```{r exercise 3.3, exercise = TRUE}
+```{r exercise_3_3, exercise = TRUE}
 # Box office Star Wars (in millions!)
 new_hope <- c(460.998, 314.4)
 empire_strikes <- c(290.475, 247.900)
@@ -129,7 +129,7 @@ titles <- c("A New Hope", "The Empire Strikes Back", "Return of the Jedi")
 #
 ```
 
-```{r exercise 3.3-solution}
+```{r exercise_3_3-solution}
 # Box office Star Wars (in millions!)
 new_hope <- c(460.998, 314.4)
 empire_strikes <- c(290.475, 247.900)
@@ -157,7 +157,7 @@ To calculate the total box office revenue for the three Star Wars movies, you ha
 
 In R, the function rowSums() conveniently calculates the totals for each row of a matrix. This function creates a new vector:
 
-```{r example 3.4, exercise = TRUE}
+```{r example_3_4, exercise = TRUE}
 rowSums(my_matrix)
 ```
 
@@ -165,7 +165,7 @@ rowSums(my_matrix)
 • Calculate the worldwide box office figures for the three movies and put these in the vector named worldwide_vector.
 • Print the value of worldwide_vector.
 
-```{r exercise 3.4, exercise = TRUE}
+```{r exercise_3_4, exercise = TRUE}
 # Construct star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
@@ -179,7 +179,7 @@ star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
 #
 ```
 
-```{r exercise 3.4-solution}
+```{r exercise_3_4-solution}
 # Construct star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
@@ -198,14 +198,14 @@ worldwide_vector
 In the previous exercise you calculated the vector that contained the worldwide box office receipt for each of the three Star Wars movies. However, this vector is not yet part of star_wars_matrix.
 
 You can add a column or multiple columns to a matrix with the cbind() function, which merges matrices and/or vectors together by column. For example:
-```{r example 3.5, exercise = TRUE}
+```{r example_3_5, exercise = TRUE}
 big_matrix <- cbind(matrix1, matrix2, vector1 ...)
 ```
 
 #### Instructions
 • Add worldwide_vector as a new column to the star_wars_matrix and assign the result to all_wars_matrix. Use the cbind() function.
 
-```{r exercise 3.5, exercise = TRUE}
+```{r exercise_3_5, exercise = TRUE}
 # Construct star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
@@ -220,7 +220,7 @@ worldwide_vector <- rowSums(star_wars_matrix)
 #
 ```
 
-```{r exercise 3.5-solutions}
+```{r exercise_3_5-solutions}
 # Construct star_wars_matrix
 box_office <- c(460.998, 314.4, 290.475, 247.900, 309.306, 165.8)
 star_wars_matrix <- matrix(box_office, nrow = 3, byrow = TRUE,
@@ -250,7 +250,7 @@ Type the name of these matrices in the console and hit Enter if you want to have
 
 • Use rbind() to paste together star_wars_matrix and star_wars_matrix2, in this order. Assign the resulting matrix to all_wars_matrix.
 
-```{r exercise 3.6, exercise = TRUE}
+```{r exercise_3_6, exercise = TRUE}
 # star_wars_matrix and star_wars_matrix2 are available in your workspace
 box_office2 <- c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5)
 star_wars_matrix2 <- matrix(box_office2, nrow = 3, byrow = TRUE,
@@ -261,7 +261,7 @@ star_wars_matrix2 <- matrix(box_office2, nrow = 3, byrow = TRUE,
 #
 ```
 
-```{r exercise 3.6-solution}
+```{r exercise_3_6-solution}
 # star_wars_matrix and star_wars_matrix2 are available in your workspace
 box_office2 <- c(474.5, 552.5, 310.7, 338.7, 380.3, 468.5)
 star_wars_matrix2 <- matrix(box_office2, nrow = 3, byrow = TRUE,
@@ -281,7 +281,7 @@ Just like cbind() has rbind(), colSums() has rowSums(). The code chunk already c
 • Calculate the total revenue for the US and the non-US region and assign total_revenue_vector. You can use the colSums() function.
 • Print out total_revenue_vector to have a look at the results.
 
-```{r exercise 3.7, exercise = TRUE}
+```{r exercise_3_7, exercise = TRUE}
 # all_wars_matrix is available in your Notebook
 all_wars_matrix
 
@@ -292,7 +292,7 @@ all_wars_matrix
 #
 ```
 
-```{r exercise 3.7-solution}
+```{r exercise_3_7-solution}
 # all_wars_matrix is available in your Notebook
 all_wars_matrix
 
@@ -323,7 +323,7 @@ Back to Star Wars with this newly acquired knowledge! As in the previous exercis
 • This time, select the non-US revenue for the first two movies in all_wars_matrix. Store the result as non_us_some.
 • Use mean() again to print out the average of the values in non_us_some
 
-```{r exercise 3.8, exercise = TRUE}
+```{r exercise_3_8, exercise = TRUE}
 # all_wars_matrix is available in your workspace
 all_wars_matrix
 
@@ -338,7 +338,7 @@ all_wars_matrix
 #
 ```
 
-```{r exercise 3.8-solution}
+```{r exercise_3_8-solution}
 # all_wars_matrix is available in your workspace
 all_wars_matrix
 
@@ -365,7 +365,7 @@ As a newly-hired data analyst for Lucasfilm, it is your job to find out how many
 • Divide all_wars_matrix by 5, giving you the number of visitors in millions. Assign the resulting matrix to visitors.
 • Print out visitors so you can have a look.
 
-```{r exercise 3.9, exercise = TRUE}
+```{r exercise_3_9, exercise = TRUE}
 # all_wars_matrix is available in your workspace
 all_wars_matrix
 
@@ -376,7 +376,7 @@ all_wars_matrix
 #
 ```
 
-```{r exercise 3.9-solution}
+```{r exercise_3_9-solution}
 # all_wars_matrix is available in your workspace
 all_wars_matrix
 
