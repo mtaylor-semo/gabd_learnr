@@ -139,7 +139,7 @@ Complete the code in the chunk such that it assigns the value 42 to the variable
 of x. You know what to do with the green arrow. Notice that when you ask R to print x, the value 42
 appears. At least it will if you did this correctly!
 
-```{r exercise 1.3, exercise = TRUE}
+```{r exercise_1_3, exercise = TRUE}
 # Assign the value 42 to x
 
 #print out the value of the variable x
@@ -148,7 +148,7 @@ appears. At least it will if you did this correctly!
 
 ```
 
-```{r exercise 1.3-solution}
+```{r exercise_1_3-solution}
 # Assign the value 42 to x
 x <- 42
 #print out the value of the variable x
@@ -170,7 +170,7 @@ Instructions
 Run  the code chunk and look at the console: you see that the number 5 is printed. So R now links the
 variable my_apples to the value 5.
 
-```{r exercise 1.4, exercise = TRUE}
+```{r exercise_1_4, exercise = TRUE}
 # Assign the value 5 to the variable my_apples
 
 #Print out the variable my_apples
@@ -178,7 +178,7 @@ variable my_apples to the value 5.
 #
 ```
 
-```{r exercise 1.4-solution}
+```{r exercise_1_4-solution}
 # Assign the value 5 to the variable my_apples
 my_apples <- 5
 #Print out the variable my_apples
@@ -238,7 +238,7 @@ variable to the variable my_fruit. This is not possible.
 • Run the code chunk and read the error message. Make sure to understand why this did not work.
 • Adjust the code so that R knows you have 6 oranges and thus a fruit basket with 11 pieces of fruit
 
-```{r exercise 1.6, exercise = TRUE}
+```{r exercise_1_6, exercise = TRUE}
 # Assign a value to the variable my_apples
 my_apples <- 5
 # Fix the assignment of my_oranges
@@ -248,7 +248,7 @@ my_fruit <- my_apples + my_oranges
 
 ```
 
-```{r exercise 1.6-solution}
+```{r exercise_1_6-solution}
 # Assign a value to the variable my_apples
 my_apples <- 5
 # Fix the assignment of my_oranges
@@ -276,7 +276,7 @@ Assign values to the these variables:
 character.
 • my_logical variable to FALSE. Note that R is case sensitive!
 
-```{r exercise 1.7, exercise = TRUE}
+```{r exercise_1_7, exercise = TRUE}
 # Assign 42 to my_numeric
 my_numeric
 
@@ -287,7 +287,7 @@ my_character
 my_logical
 ```
 
-```{r exercise 1.7-solution}
+```{r exercise_1_7-solution}
 # Assign 42 to my_numeric
 my_numeric <- 42
 
@@ -307,7 +307,7 @@ with the class() function, as the code on the right shows.
 #### Instructions
 * Complete the code to show the classes of my_character and my_logical.
 
-```{r exercise 1.8, exercise = TRUE}
+```{r exercise_1_8, exercise = TRUE}
 # Declare variables of different types
 my_numeric <- 42
 my_character <- "universe"
@@ -322,7 +322,7 @@ class(my_numeric)
 # Check class of my_logical
 ```
 
-```{r exercise 1.8-solution}
+```{r exercise_1_8-solution}
 # Declare variables of different types
 my_numeric <- 42
 my_character <- "universe"
