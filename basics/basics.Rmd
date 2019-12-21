@@ -12,7 +12,7 @@ library(learnr)
 ## 1.1 Comments and Calculators
 R makes use of the # sign to add comments, so that you and others can understand what the R code is about.
 Just like Twitter! Comments are not run as R code, so they will not influence your result. For example,
-"Calculate 3 + 4"" in the example below is a comment.
+"Calculate 3 + 4" in the example below is a comment.
 
 ```{r example, exercise = TRUE}
 #Calculate 3 + 4
